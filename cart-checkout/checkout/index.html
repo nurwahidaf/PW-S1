@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Her Store - Checkout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0 auto;
+        }
+        nav {
+            background-color: #d1c4e9;
+            height: 60px;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .order-status {
+            width: 65%;
+            float: left;
+        }
+        .customer-information {
+            margin-left: 70px;
+        }
+        .left {
+            text-align: left;
+        }
+        .right {
+            text-align: right;
+        }
+        .summary {
+            width: 35%;
+            float: right;
+            padding: 50px 50px;
+        }
+        #dsc_code {
+            margin-right: 0;
+            padding: 4px;
+            width: 100%;
+        }
+        .apply {
+            padding: 4px;
+            background-color: #ad1457;
+            color: white;
+            width: 100%;
+            transition: all 1s;
+        }
+        .apply:hover {
+            background-color: #d1c4e9;
+            color: black;
+        }
+        footer {
+            width: 100%;
+            height: 70px;
+            background-color: #d1c4e9;
+            margin: 0;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+        }
+        #email {
+            padding: 5px;
+            margin-right: -7px;
+        }
+        .subscribe {
+            background-color: red;
+            color: white;
+            padding: 5px;
+        }
+        .subscribe:hover {
+            background-color: #ad1457;
+        }
+    </style>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+</head>
+<body>
+    <nav>
+        <h1 style="padding: 15px 15px; float: left;">
+            <a href="#" style="font-size: 18px;"><i class="fas fa-store"></i>&nbsp;Her Store</a>
+        </h1>
+        <ul style="list-style: none; margin: 0; padding: 12px;">
+            <li style="border-right: 1px solid; float: left; padding: 10px; margin-left: 30px;">
+                <a href="#" style="color: #ad1457;">Category 1</a>
+            </li>
+            <li style="border-right: 1px solid; float: left; padding: 10px;">
+                <a href="#" style="color: #ad1457;">Category 2</a>
+            </li>
+            <li style="float: left; padding: 10px;">
+                <a href="#" style="color: #ad1457;">Category 3</a>
+            </li>
+            <li style="float: right; padding: 10px; margin-left: -10px;">
+                <a href="#"><i class="fas fa-shopping-cart"></i> Cart (1)</a>
+            </li>
+            <li style="float: right; padding: 10px; margin-left: -10px;">
+                <a href="#"><i class="fas fa-search"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <div style="clear: both;"></div>
+    <div class="container">
+        <section class="order-status">
+            <article style="display: grid;">
+                <header>
+                    <div style="float: left; vertical-align: middle; margin: 20px 30px 5px 70px;">
+                        <i class="far fa-check-circle fa-5x"></i>
+                    </div>
+                    <div style="float: left; padding: 5px; margin-top: 30px;">
+                        <p>Order 131217312</p><br>
+                        <p style="margin-top: -15px; font-size: 20px;"><b>Thank you, Kenny!</b></p>
+                    </div>
+                </header>
+                <div class="status" style="margin: 20px 0 20px 70px; line-height: 25px;">
+                    <hr>
+                    <br>
+                    <p>Your order is confirmed.</p>
+                    <p>We've accepted your order and we're getting it ready.</p>
+                    <br>
+                    <hr>
+                </div>
+                <div class="customer-information">
+                    <h3>Customer Information</h3>
+                    <br>
+                    <table width="600px">
+                        <tr>
+                            <td style="font-weight: 600;">Shipping Address</td>
+                            <td style="font-weight: 600;">Billing Address</td>
+                        </tr>
+                        <tr>
+                            <td>Kenny Bostick</td>
+                            <td>Kenny Bostick</td>
+                        </tr>
+                        <tr style="color: #ad1457;">
+                            <td><u>12 Woldo Point Road</u></td>
+                            <td><u>12 Woldo Point Road</u></td>
+                        </tr>
+                        <tr style="color: #ad1457;">
+                            <td><u>Mishauken, NY 11200</u></td>
+                            <td><u>Mishauken, NY 11200</u></td>
+                        </tr>
+                        <tr style="color: #ad1457;">
+                            <td><u>United States</u></td>
+                            <td><u>United States</u></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <table width="600px">
+                        <tr>
+                            <td style="font-weight: 600;">Shipping Method</td>
+                            <td style="font-weight: 600;">Payment Method</td>
+                        </tr>
+                        <tr>
+                            <td>UPS Grounding (Estimated ship <br> time of 3-6 days)</td>
+                            <td>
+                                <i class="fab fa-cc-visa"></i>
+                                Ending in 3217 - Rp 295.000
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <hr>
+                    <br>
+                </div>
+            </article>
+        </section>
+
+        <section class="summary">
+            <article style="line-height: 35px; background-color: #d1c4e9; padding: 20px;">
+                <header>
+                    <h1 style="font-size: 18px;">Summary (1 Item)</h1>
+                </header>
+                <div class="shop_summary">
+                    <table width="100%">
+                        <tr>
+                            <td style="text-align: left;">Subtotal</td>
+                            <td style="text-align: right;">Rp 295.000</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Shipping</td>
+                            <td style="text-align: right;">-</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Est. Taxes</td>
+                            <td style="text-align: right;">-</td>
+                        </tr>
+                    </table>
+                    <hr>
+                    <table width="100%">
+                        <tr>Gift card or discount code</tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="dsc_code" id="dsc_code">
+                            </td>
+                            <td><button class="apply">Apply</button></td>
+                        </tr>
+                    </table>
+                    <hr>
+                    <table width="100%">
+                        <tr>
+                            <td style="text-align: left;">Total</td>
+                            <td style="text-align: right;">Rp 295.000</td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+        </section>
+    </div>
+    <div style="clear: both;"></div>
+    <footer class="footer">
+        <div class="store_name" style="float: left;">
+            <a href="#"><b style="font-size: 15px;">Her Store</b></a>
+            <br>
+            <div class="payment">
+                <i class="fab fa-cc-visa fa-2x"></i>
+                <i class="fab fa-cc-mastercard fa-2x"></i>
+                <i class="fab fa-cc-paypal fa-2x"></i>
+            </div>
+        </div>
+        
+        <div class="navigation">
+            <ul style="list-style: none;">
+                <li style="border-right: 1px solid; float: left; padding: 10px; margin-left: 30px;">
+                    <a href="#" style="color: #ad1457; font-size: 15px;">Category 1</a>
+                </li>
+                <li style="border-right: 1px solid; float: left; padding: 10px;">
+                    <a href="#" style="color: #ad1457; font-size: 15px;">Category 2</a>
+                </li>
+                <li style="float: left; padding: 10px;">
+                    <a href="#" style="color: #ad1457; font-size: 15px;">Category 3</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="message" style="float: right;">
+            <p style="font-size: 12px; margin-bottom: 5px;">Stay In Touch! Join Our Newsletter.</p>
+            <input type="text" name="email" id="email" placeholder="Enter Email">
+            <button class="subscribe">Subscribe</button>
+        </div>
+        <div style="clear: both;"></div>
+    </footer>
+</body>
+</html>
