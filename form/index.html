@@ -1,0 +1,109 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza On Demand | Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Verdana', Tahoma;
+        }
+        .customer_information {
+            line-height: 35px;
+        }
+    </style>
+</head>
+
+<body style="padding: 20px; min-height: 100vh;">
+    <div style="width: 800px; border: 1px solid black; margin: 10px auto; padding: 20px;">
+        <header>
+            <h2>Black Goose Bistro | Pizza-on-Demand</h2>
+            <p style="font-size: 18px;">Our 12" wood-fired pizzas are available for delevery. Build your custom pizza we'll deliver it within an hour.</p>
+        </header>
+
+        <section>
+            <form action="http://blackgoosebistro.com/pizza.php" method="post">
+                <div class="customer_information">
+                    <p style="margin-bottom: 5px; font-size: 18px;">Your Information</p>
+                    <div style="float: left; font-size: 18px;">Name: <input type="text" name="customername" required></div>
+
+                    <div style="clear: left;"></div>
+
+                    <div style="float: left; font-size: 18px;">Address: <input type="text" name="address" required></div>
+
+                    <div style="clear: left;"></div>
+
+                    <div style="float: left; font-size: 18px;">Telephone Number: <input type="number" name="telephone" required></div>
+
+                    <div style="clear: left;"></div>
+
+                    <div style="float: left; font-size: 18px;">Email: <input type="email" name="email" required></div>
+
+                    <div style="clear: left;"></div>
+
+                    <div style="clear: left; font-size: 18px;">Delivery Instructions: <br> 
+                        <textarea name="instructions" cols="70" rows="5" maxlength="400" placeholder="Only 400 Character"required></textarea>
+                    </div>
+                </div>
+                <div>
+                    <h3>Design Your Dream Pizza</h3>
+                    <p style="font-size: 18px;">Pizza Specs</p>
+
+                    <p style="font-size: 18px;">Crust (Choose one):</p>
+                    <div style="margin-top: -10px; margin-left: 20px;">
+                        (<input type="radio" name="crust" value="classic" id="crust" required>)
+                        <label for="crust">Classic white</label> <br>
+                        (<input type="radio" name="crust" value="multigrain" id="crust1">)
+                        <label for="crust1">Multigrain</label> <br>
+                        (<input type="radio" name="crust" value="cheese" id="crust2">)
+                        <label for="crust2">Cheese-stuffed crust</label> <br>
+                        (<input type="radio" name="crust" value="gluten " id="crust3">)
+                        <label for="crust3">Gluten-free</label>
+                    </div>
+
+                    <p style="font-size: 18px;">Toppings (Choose as many as you want):</p>
+                    <div style="margin-top: -10px; margin-left: -20px;">
+                        <ul style="list-style: none;">
+                            <li><input type="checkbox" name="toppings[]" value="red sauce" checked> 
+                            Red sauce</li>
+                            <li><input type="checkbox" name="toppings[]" value="white sauce">
+                            White sauce
+                            </li>
+                            <li><input type="checkbox" name="toppings[]" value="mozzarella">
+                              Mozzarella Cheese
+                            </li>
+                            <li><input type="checkbox" name="toppings[]" value="pepperoni"> 
+                             Pepperoni</li>
+                            <li><input type="checkbox" name="toppings[]" value="mushrooms"> 
+                              Mushrooms</li>
+                            <li><input type="checkbox" name="toppings[]" value="peppers">
+                            Peppers
+                            </li>
+                            <li><input type="checkbox" name="toppings[]" value="anchovies"> 
+                              Anchovies</li>
+                        </ul>
+                    </div>
+
+                    <fieldset style="border: 0; margin-left: -10px;">
+                        <legend>Number</legend>
+                        <p>How many pizzas: 
+                        <select name="pizzas" size="1">
+                            <option hidden>1</option>
+                            <option hidden>2</option>
+                            <option hidden>3</option>
+                            <option hidden>4</option>
+                            <option hidden>5</option>
+                            <option hidden>6</option>
+                        </select>
+                        </p>
+                        </fieldset>
+                </div>
+                <input type="submit" value="Bring me a pizza!">
+                <input type="reset" value="Reset">
+            </form>
+        </section>
+    </div>
+</body>
+</html>
