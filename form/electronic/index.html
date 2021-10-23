@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic Form</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box
+        }
+        body {
+            margin: 0 auto;
+            width: 100%;
+        }
+        nav {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        section {
+            margin-top: 30px;
+        }
+        .picture {
+            width: 40%;
+            float: left;
+        }
+        .btn-picture {
+            background-color: #d1c4e9;
+            width: 25%;
+            padding: 3px;
+            letter-spacing: 1px;
+            box-shadow: 4px 3px #ad1457;
+        }
+        .btn-picture:active {
+            position: relative;
+            top: 3px;
+            left: 3px;
+            box-shadow: none;
+            background-color: #d1c4e9;
+            color: black;
+        }
+        .order-detail {
+            width: 60%;
+            float: right;
+        }
+        #submit-form {
+            background-color: #d1c4e9;
+            width: 30%;
+            padding: 3px;
+            letter-spacing: 2px;
+            box-shadow: 4px 3px #ad1457;
+        }
+        #submit-form:active {
+            position: relative;
+            top: 3px;
+            left: 3px;
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul style="list-style: none; display: flex; margin: 30px; border: 1px solid #ad1457; line-height: 25px; background-color: #d1c4e9;">
+            <li style="border-right: 1px solid #ad1457; padding: 0px 70px;"><a href="#">Home</a></li>
+            <li style="border-right: 1px solid #ad1457; padding: 0px 70px;"><a href="#" >Generate Link</a></li>
+            <li style="border-right: 1px solid #ad1457; padding: 0px 70px;"><a href="#">Transaction History</a></li>
+            <li style="border-right: 1px solid #ad1457; padding: 0px 70px;"><a href="#">Policy</a></li>
+            <li style="padding: 0px 7px 0 110px;"><a href="#">Log Out</a></li>
+        </ul>
+    </nav>
+    <div style="clear: both;"></div>
+    <div>
+        <section class="picture">
+            <article style="text-align: center;">
+                <img src="https://www.lenovo.com/medias/Legion-5Pro-16-AMD-88GMY501578-725x515.png?context=bWFzdGVyfHJvb3R8NjM3ODR8aW1hZ2UvcG5nfGg0Ny9oMWEvMTE3ODg3NTg3MTIzNTAucG5nfDI5NTYwMTZmNDFlZjEyYmY2YmJlYzJmODZhMTFkN2ZmOGI5NGYzOGI1ODRkYmMzZjg5NjM1YzM2MzllYzhkZWI" alt="Lenovo Legion 5 Pro" style="width: 400px; padding: 30px;">
+                <button class="btn-picture" style="float: left; margin-left: 120px;">Upload Picture</button>
+            </article>
+        </section>
+
+        <section class="order-detail">
+            <article>
+                <form action="electronicform.php" method="post" autocomplete="off">
+                    <table width="90%">
+                        <tr>
+                            <td style="text-align: left;">Title Here</td>
+                            <td style="text-align: center;">:</td>
+                            <td style="text-align: left; border: 1px solid; padding: 3px 0 3px 10px;">
+                            Lenovo Legion 5 Pro
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Description</td>
+                            <td style="text-align: center;">:</td>
+                            <td style="text-align: left; border: 1px solid; padding: 3px 0 3px 10px;">
+                                <table width="250px">
+                                    <tr>
+                                        <td>Year</td>
+                                        <td>: 2021</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Model</td>
+                                        <td>: Legion 5 Pro, Black</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Condition</td>
+                                        <td>: New</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Account Number</td>
+                            <td style="text-align: center;">:</td>
+                            <td>
+                                <input type="text" name="acc-number" minlength="13" maxlength="19" placeholder="123-456-789-012-345" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Bank</td>
+                            <td style="text-align: center;">:</td>
+                            <td>
+                                <input type="text" list="bank" name="bank-name">
+                                <datalist id="bank">
+                                    <option value="BCA">BCA</option>
+                                    <option value="BRI">BRI</option>
+                                    <option value="BNI">BNI</option>
+                                    <option value="Mandiri">Mandiri</option>
+                                    <option value="CIMB Niaga">CIMB Niaga</option>
+                                </datalist>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Account Holder</td>
+                            <td style="text-align: center;">:</td>
+                            <td>
+                                <input type="text" name="acc-holder" placeholder="Insert Name" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Transaction</td>
+                            <td style="text-align: center;">:</td>
+                            <td>
+                                <input type="number" name="quantity" min="1" max="10" style="width: 35px;" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;"></td>
+                            <td style="text-align: center;"></td>
+                            <td style="font-size: smaller;">*if the transaction is for 3 person, choose 3 from the drop-down list</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;"></td>
+                            <td style="text-align: center;"></td>
+                            <td class="detail-transaction" style="color: #ad1457;">
+                                <input type="checkbox" id="detail-trasaction1" name="detail-trasaction1">
+                                Send to Mobile Phone
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;"></td>
+                            <td style="text-align: center;"></td>
+                            <td class="detail-transaction" style="color: #ad1457;">
+                                <input type="checkbox" id="detail-trasaction2" name="detail-trasaction2">
+                                Send to Email
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Send to Mobile Phone</td>
+                            <td style="text-align: center;">:</td>
+                            <td>
+                                <input type="text" name="acc-number" minlength="10" maxlength="13" placeholder="1234567890, 1234567891">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">Send to Email</td>
+                            <td style="text-align: center;">:</td>
+                            <td>
+                                <input type="email" name="email-cs" placeholder="abcdefg@gmail.com">
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="submit" style="margin: 40px; text-align: center;">
+                        <input type="submit" id="submit-form" value="Generate Nabr Link">
+                    </div>
+                </form>
+            </article>
+        </section>
+    </div>
+</body>
+</html>
