@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #e3f2fd;
+}
+
+ul {
+    list-style: none;
+}
+
+.main {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.aside {
+    float: right;
+    margin-top: 20px;
+    text-align: end;
+}
+
+aside {
+    float: right;
+    margin: 20px 20px 0px 20px;
+    padding: 20px;
+    display: grid;
+    line-height: 30px;
+}
+
+.section {
+    display: flex;
+    margin-top: 20px;
+}
+
+.myimage {
+    margin: 20px 20px 0px 80px;
+    padding: 20px;
+    float: left;
+}
+
+.profile {
+    line-height: 30px;
+    margin: 30px 20px 0px 20px;
+    padding: 20px;
+}
+
+article {
+    text-align: justify;
+    line-height: 30px;
+    margin: 20px;
+    padding: 0px 20px;
+}
+
+footer {
+    text-align: center;
+    margin: 20px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin: 50px 0 50px 0;
+}
+
+.box {
+    width: 250px;
+    height: 200px;
+    border: 1px solid;
+    padding: 10px;
+}
+
+.box01 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box02 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.attach {
+    width: 250px;
+    height: 200px;
+    padding: 20px;
+}
