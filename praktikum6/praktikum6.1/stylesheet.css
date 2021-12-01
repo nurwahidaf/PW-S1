@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    min-height: 90%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 70%;
+    margin: 25vh auto;
+}
+
+img {
+    width: 15vw;
+    margin: 3px;
+    border: 2px solid;
+    border-radius: 3px;
+}
+
+.img1, .img2, .img3 {
+    width: 30.5%;
+}
+
+.img4, .img5, .img6, .img7, .img8 {
+    width: 18%;
+}
