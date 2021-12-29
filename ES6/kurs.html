@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Kurs Mata Uang</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 20px;
+        }
+        div {
+            width: 100%;
+            border: 1px solid;
+            border-radius: 2px;
+            margin: 0 auto;
+        }
+        table {
+            margin: 0 auto;
+            border: 1px solid;
+            padding: 10px 20px;
+        }
+    </style>
+    <script>
+        function hitungKurs() {
+            let nilai = document.getElementById("nilai").value;
+            let kurs = document.getElementById("valas").value;
+            let hitungKurs = nilai * kurs ;
+            let rupiah = document.getElementById('rupiah').value=hitungKurs;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h2>Menghitung Nilai Kurs Mata Uang</h2>
+        <table>
+            <form>
+                <tr>
+                    <th>Masukkan Nilai</th>
+                    <th>Valas</th>
+                    <th>Nilai Rupiah</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" id="nilai" value="" onkeyup="hitungKurs()">
+                    </td>
+                    <td>
+                        <select id="valas" onchange="hitungKurs()">
+                            <option value="9915">Dollar US</option>
+                            <option value="13472">Dollar Singapore</option>
+                            <option value="874">Ringgit Malaysia</option>
+                            <option value="120">Yen Jepang</option>
+                            <option value="15888">Euro</option>
+                            <option value="3592">Riyal Arab Saudi</option>
+                        </select>
+                    </td>    
+                    <td>
+                        <input type="text" id="rupiah" value="0">
+                    </td>
+                </tr>
+            </form>
+        </table>
+        <br>
+    </div>
+    
+</body>
+</html>

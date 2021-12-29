@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login Authentication</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0 auto;
+            padding: 20px;
+            width: 50%;
+        }
+        fieldset {
+            width: 80%;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        h2 {
+            text-align: center;
+        }
+        table {
+            margin: 0 auto;
+            text-align: center;
+        }
+        #login {
+            padding: 5px 10px;
+            border: none;
+            background-color: rgb(207, 169, 230);
+        }
+    </style>
+    <script src="/otentikasi.js"></script>
+</head>
+<body>
+    <form method="post" name="login" id="loginAuthen">
+        <fieldset>
+            <h2>Login Authentication</h2>
+            <table>
+                <tr>
+                    <td>Username</td>
+                    <td>
+                        <input type="text" name="username">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>
+                        <input type="password" name="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <a href="loginsuccess.html" onclick="loginAuthentication()">
+                            <input type="button" value="Login" id="login">
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>
